@@ -7,6 +7,9 @@ case "$1" in
     *.bam)
         samtools view -h "$1"
         ;;
+    *.bcl)
+        bcl_view.py "$1"
+        ;;
     *)
         # We don't handle this format.
         exit 1
