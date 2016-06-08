@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# .lessfilter - Custom rules for lesspipe
+#
+
+case "$1" in
+    *.bam)
+        samtools view -h "$1"
+        ;;
+    *)
+        # We don't handle this format.
+        exit 1
+esac
+
+# No further processing by lesspipe necessary
+exit 0
