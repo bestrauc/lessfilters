@@ -3,12 +3,15 @@
 # .lessfilter - Custom rules for lesspipe
 #
 
+# activate the venv managing our Python lessfilters
+. <LESSENV_ACTIVATE_PATH>
+
 case "$1" in
-    *.bam)
-        samtools view -h "$1"
-        ;;
     *.bcl)
         bcl_view.py "$1"
+        ;;
+    *.dcm)
+        dicom_header.py "$1"
         ;;
     *)
         # We don't handle this format.

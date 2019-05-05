@@ -1,0 +1,10 @@
+# the venv for the tools
+lessfilter_env
+
+# setuptools artifacts
+build
+dist
+*egg*
+
+# the generated lessfilter
+lessfilter

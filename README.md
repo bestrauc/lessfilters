@@ -1,3 +1,9 @@
-Some simple lessfilter scripts.
+Some simple lessfilter scripts in Python.
 
-Assumes things like samtools or bcl_view are in your PATH.
+The `setup_lessfilters.sh` bash script must be run in the root directory of 
+the repository and will set up a venv for the Python less preprocessors to 
+run in. The preprocessors will be installed in the venv along with their 
+dependencies. The path the the venv is then added to `.lessfilter`.
+
+If no `.lessfilter` exists in `$HOME` yet, it will be automatically linked
+there. Otherwise we have to merge the lessfilters manually.
