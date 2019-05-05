@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Open Illumina BCL files and print the encoded bases."""
+
 import sys
 import struct
 from math import log, ceil
