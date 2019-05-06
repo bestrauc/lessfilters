@@ -22,3 +22,10 @@ else
     echo "Linking .lessfilter into your home directory."
     ln -s $(realpath lessfilter) $HOME/.lessfilter
 fi
+
+if [[ -z "${LESSOPEN}" ]]; then
+    echo -e "\n"
+    echo "LESSOPEN is not set in your shell. Add something like "
+    echo "'export LESSOPEN=\"| /usr/bin/lesspipe %s\""
+    echo "to your bashrc/zshrc.'"
+fi
